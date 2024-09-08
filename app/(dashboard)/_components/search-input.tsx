@@ -9,10 +9,12 @@ import { Input } from "@/components/ui/input";
 export const SearchInput = () => {
   const router = useRouter();
   const [value, setValue] = useState("");
-  const debouncedValue = useDebounceValue(value, 500);
+  // new useDebounceValue
+  const [debouncedValue, setDebouncedValue] = useDebounceValue("", 500);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value);
+    setDebouncedValue(e.target.value);
   };
 
   useEffect(() => {

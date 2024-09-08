@@ -17,7 +17,6 @@ const Navbar = () => {
         <SearchInput />
       </div>
       <div className="block lg:hidden flex-1">
-        {" "}
         <OrganizationSwitcher
           hidePersonal
           appearance={{
