@@ -149,6 +149,6 @@ export const unFavorite = mutation({
 
     await ctx.db.delete(existingFavorite._id);
 
-    return board;
+    return;
   },
 });
