@@ -1,19 +1,19 @@
 // Define Liveblocks types for your application
 // https://liveblocks.io/docs/api-reference/liveblocks-react#Typing-your-data
 
-import { createClient } from "@liveblocks/client";
-import { LiveblocksProvider } from "@liveblocks/react/suspense";
+// import { createClient } from "@liveblocks/client";
 
-const client = createClient({
-  publicApiKey: process.env.LIVEBLOCKS_PUBLIC_API_KEY!,
-});
+// const client = createClient({
+//   authEndpoint: "/api/liveblocks-auth",
+//   throttle: 16,
+// });
 
 declare global {
   interface Liveblocks {
     // Each user's Presence, for useMyPresence, useOthers, etc.
     Presence: {
       // Example, real-time cursor coordinates
-      // cursor: { x: number; y: number };
+      cursor: { x: number; y: number } | null;
     };
 
     // The Storage tree for the room, for useMutation, useStorage, etc.
